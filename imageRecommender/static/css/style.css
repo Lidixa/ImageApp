@@ -9,11 +9,11 @@ body{
 }
 */
 
-.europeana .thumbnail {
+#europeana .thumbnail {
     display:block;
     float:left;
 }
-.europeana img {
+#europeana img {
     max-width:160px;
     max-height:160px;
 }
