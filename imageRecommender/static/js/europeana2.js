@@ -13,4 +13,4 @@ $.getJSON(apiCall, function (json) {
         objecthtml += '<a href="' + link + '" class="thumbnail" title="' + title + '" target="_blank"><img src="' + thumbnail + '" alt="' + title + '"></a>';
         $('#content').append(objecthtml);
     });
-});
+}); 
