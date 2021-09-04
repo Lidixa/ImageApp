@@ -8,6 +8,16 @@ body{
     box-sizing:border-box;
 }
 */
+
+.europeana .thumbnail {
+    display:block;
+    float:left;
+}
+.europeana img {
+    max-width:160px;
+    max-height:160px;
+}
+
 /* section header    */
 .header{
     width: 100%;
