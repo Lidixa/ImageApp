@@ -1,4 +1,4 @@
-var apiCall = 'https://www.europeana.eu/api/v2/search.json?wskey=chametel&query=europeana_collectionName%3A9200434*&start=1&rows=24&profile=rich';
+var apiCall = 'https://www.europeana.eu/api/v2/search.json?wskey=chametel&query=Roger%20Fenton&start=1&rows=24&profile=rich&theme=photography';
 
 $.getJSON(apiCall, function (json) {
     // here we will do something with the response
