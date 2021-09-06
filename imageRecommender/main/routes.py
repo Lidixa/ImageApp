@@ -10,6 +10,7 @@ def home():
     gImages = Galleryimages.query.paginate(page=page, per_page=8)
     return render_template('home.html', images = gImages)
 
+@main.route("/europeana")
 def europeana():
     return render_template('europeana.html')
 
