@@ -31,5 +31,9 @@ def recommend():
     else:
         print('Inconsistency!')    
 
+@main.route('/prototype')
+def prototype():
+    return render_template('prototype.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
