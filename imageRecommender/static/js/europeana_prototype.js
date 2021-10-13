@@ -44,10 +44,10 @@ $.getJSON(apiCall, function (json) {
             + title + '</h2><h3><i>'
             + author + ', ' + year + '</i></h3><p>'
             + dataProvider + '</p></div><div class="input">'
-            + '<input type="checkbox" id="image" name="image" ><label for="image">Image</label>'
-            + '<input type="checkbox" id="author" name="author"><label for="author">Author</label>'
-            + '<input type="checkbox" id="geo" name="geo"><label for="geo">GEO</label>'
-            + '<input type="checkbox" id="type" name="type"><label for="type">Type</label></div>';
+            + '<div><input type="checkbox" id="image" name="image" ><label for="image">Image</label></div>'
+            + '<div><input type="checkbox" id="author" name="author"><label for="author">Author</label></div>'
+            + '<div><input type="checkbox" id="geo" name="geo"><label for="geo">Location</label></div>'
+            + '<div><input type="checkbox" id="type" name="type"><label for="type">Type (sculpture, painting, etc)</label></div></div>';
             $('#europeana_prototype').append(objecthtml);
         }
     });
