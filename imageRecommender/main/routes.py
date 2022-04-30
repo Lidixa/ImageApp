@@ -35,5 +35,10 @@ def recommend():
 def prototype():
     return render_template('prototype.html')
 
+
+@main.route('/recommender')
+def recommender():
+    return render_template('recommender.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
