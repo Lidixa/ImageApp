@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block head %}
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicons/favicon.ico') }}"
+    type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicons/favicon.ico') }}"
+    type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/favicons/apple-touch-icon.png') }}"
+    type="image/x-icon">
+    <link  rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicons/favicon-32x32.png') }}"
+    type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicons/favicon-16x16.png') }}"
+    type="image/x-icon">
+    <title> Prototype </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/recommender.css') }}">
+    <script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/recommender.js') }}"></script>
+    <script>console.log(json);</script>
+
+{% endblock %}
+</head>
+<body>
+{% block content %}
+<div id="content">
+<div id="recommender">
+    <h1>Cultural Heritage Recommender Prototype</h1>
+</div>
+<div id="rating">
+    <h3>Please, rate the recommendations</h3>
+    <form id="rating-area-form">
+        <div id="rating-area" class="rating-area">
+            <input type="radio" id="star-5" name="rating" value="5">
+            <label for="star-5" title="«5»"></label>
+            <input type="radio" id="star-4" name="rating" value="4">
+            <label for="star-4" title="«4»"></label>
+            <input type="radio" id="star-3" name="rating" value="3">
+            <label for="star-3" title="«3»"></label>
+            <input type="radio" id="star-2" name="rating" value="2">
+            <label for="star-2" title="«2»"></label>
+            <input type="radio" id="star-1" name="rating" value="1">
+            <label for="star-1" title="«1»"></label>
+        </div>
+    </form>
+</div>
+</div>
+{% endblock content %}
+</body>
+<footer><img src="{{ url_for('static', filename='images/EU_made_with_logo_white.png') }}"/></footer>
+</html>
