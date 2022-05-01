@@ -17,7 +17,17 @@ $.getJSON(apiCall, function (json) {
         var year = item.year;
         var dataProvider = item.dataProvider;
         var objecthtml = '';
-        if (i>0) {
+        if (i==0) {
+            objecthtml += '<a href="'
+            + link + '" class="thumbnail" title="'
+            + title + '" target="_blank"><img src="'
+            + thumbnail + '" alt="'
+            + title + '" class="displayed"></a><h2>'
+            + title + '</h2><h3><i>'
+            + author + ', ' + year + '</i></h3><p>'
+            + dataProvider + '</p></div></div>';
+            $('#preview').append(objecthtml);
+        }else{
             objecthtml += '<div class="recommend"><div><a href="' + link + '" class="thumbnail" title="'
             + title + '" target="_blank"><img src="' + thumbnail + '" alt="'
             + title + '"></a></div><div class="text"><h2>'
@@ -34,22 +44,7 @@ $.getJSON(apiCall, function (json) {
             + i + '" title="«2»"></label><input type="radio" id="star-1'
             + i + '" name="rating" value="1"><label for="star-1'
             + i + '" title="«1»"></label></div></form></div></div>';
-            $('#recommender').append(objecthtml);
-        }else{
-            objecthtml += '<div id="preview"><a href="'
-            + link + '" class="thumbnail" title="'
-            + title + '" target="_blank"><img src="'
-            + thumbnail + '" alt="'
-            + title + '" class="displayed"></a><h2>'
-            + title + '</h2><h3><i>'
-            + author + ', ' + year + '</i></h3><p>'
-            + dataProvider + '</p></div><div class="input">'
-            + '<div><input type="checkbox" id="image" name="image" ><label for="image">Image</label></div>'
-            + '<div><input type="checkbox" id="author" name="author"><label for="author">Author</label></div>'
-            + '<div><input type="checkbox" id="geo" name="geo"><label for="geo">Location</label></div>'
-            + '<div><input type="checkbox" id="type" name="type"><label for="type">Type (sculpture, painting, etc)</label></div></div>';
-            $('#recommender').append(objecthtml);
+            $('#recommends').append(objecthtml);
         }
     });
-
 });

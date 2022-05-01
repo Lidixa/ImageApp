@@ -13,19 +13,60 @@
     type="image/x-icon">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='images/favicons/favicon-16x16.png') }}"
     type="image/x-icon">
+    <script src="https://kit.fontawesome.com/c24c659ecb.js" crossorigin="anonymous"></script>
     <title> Prototype </title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/recommender.css') }}">
     <script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/recommender.js') }}"></script>
-    <script>console.log(json);</script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-GTMP7F29PT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-GTMP7F29PT');
+</script>
+    <script>console.log(json);
+$("#show_filters").click(function(){
+console.log(111);
+  $(this).next("#filterbuttons").toggle();
+});
+</script>
 {% endblock %}
 </head>
 <body>
 {% block content %}
+<header>
+    <div id="header">
+        <div id="title">
+            <h2>Cultural Heritage Recommender</h2>
+        </div>
+        <div id="search">
+          <form>
+              <input type="text" placeholder="Search">
+              <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </form>
+        </div>
+        <div id="filters">
+            <button id="show_filters" onclick="$(this).next('#filterbuttons').toggle();"><i class="fa-solid fa-filter"></i></button>
+            <div id="filterbuttons">
+              <button class="btn active" onclick="$(this).toggleClass('active')">Image</button>
+              <button class="btn" onclick="$(this).toggleClass('active')"> Author</button>
+              <button class="btn" onclick="$(this).toggleClass('active')">Location</button>
+              <button class="btn" onclick="$(this).toggleClass('active')">Type</button>
+              <button class="btn" onclick="$(this).toggleClass('active')">Age</button>
+              <button class="btn" onclick="$(this).toggleClass('active')">Color</button>
+            </div>
+        </div>
+    </div>
+</header>
 <div id="content">
 <div id="recommender">
-    <h1>Cultural Heritage Recommender Prototype</h1>
+    <div id="preview">
+    </div>
+    <div id="recommends">
+    </div>
 </div>
 <div id="rating">
     <h3>Please, rate the recommendations</h3>
