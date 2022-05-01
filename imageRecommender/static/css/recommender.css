@@ -313,7 +313,6 @@ footer img{
 }
 @media (max-width: 1368px){
     #search {
-        position: relative;
-        width: 50%;
+        width: auto;
     }
 }
