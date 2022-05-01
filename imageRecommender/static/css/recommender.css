@@ -23,9 +23,23 @@ header {
     border-bottom: 1px solid rgb(218, 220, 224);
 }
 
+#home{
+    padding-left: 40px;
+    position: relative;
+    width: auto;
+    display: inline-block;
+    margin: 20px 0px;
+}
+
 #header #title, #header #search, #header #filters{
     display: inline-block;
     padding: 0 40px;
+    top: -15px;
+}
+
+#header #title h2{
+    top: -5px;
+    position: relative;
 }
 
 #content{

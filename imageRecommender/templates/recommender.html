@@ -18,8 +18,6 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/recommender.css') }}">
     <script src="{{ url_for('static', filename='js/jquery-3.6.0.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/recommender.js') }}"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GTMP7F29PT"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -27,7 +25,7 @@
 
   gtag('config', 'G-GTMP7F29PT');
 </script>
-<script>
+    <script>console.log(json);
 $("#show_filters").click(function(){
 console.log(111);
   $(this).next("#filterbuttons").toggle();
@@ -39,6 +37,9 @@ console.log(111);
 {% block content %}
 <header>
     <div id="header">
+        <div id="home">
+            <a href="#"><img src="{{ url_for('static', filename='images/favicons/favicon-32x32.png') }}"/></a>
+        </div>
         <div id="title">
             <h2>Cultural Heritage Recommender</h2>
         </div>
